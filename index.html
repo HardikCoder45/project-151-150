@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  
+ 
+  <script src="animation.js"></script>
+  
+</head>
+
+<body>
+    
+    
+  <a-scene background="color:white">
+    <a-asset-item id="train-mtl" src="./train model/obj.mtl"></a-asset-item>
+    <a-asset-item id="train-obj" src="./train model/tinker.obj"></a-asset-item>
+
+    <a-asset-item id="arrow-mtl" src="./arrow/obj.mtl"></a-asset-item>
+    <a-asset-item id="arrow-obj" src="./arrow/tinker.obj"></a-asset-item>
+    
+    <a-entity camera look-controls wasd-controls="acceleration: 5000">
+  <a-camera position="0 20 0" >
+
+      </a-camera>
+    </a-entity>
+
+    <a-entity position="20 0 10" rotation="-90 -120 0" obj-model="obj: #arrow-obj; mtl: #arrow-mtl" scale="0.1 0.1 0.1" onclick="press()" arrow>
+   
+ 
+    </a-entity>
+<a-entity position="20 -5 10" rotation="-90 -120 180" obj-model="obj: #train-obj; mtl: #train-mtl" scale="0.1 0.1 0.1" move-train>
+   
+ 
+  </a-entity>
+   
+
+  </a-scene>
+
+</body>
+
+</html>
+
